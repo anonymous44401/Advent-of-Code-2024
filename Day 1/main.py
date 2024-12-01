@@ -32,11 +32,10 @@ def merge(left: list, right: list) -> list:
 with open('Day 1/sampleData.txt', 'r') as file:
     lines = file.readlines()
     
-    print(lines)
-
 values = []
 left = []
 right = []
+total = 0
 
 for line in lines:
     values.append(line.strip().split(" "))
@@ -47,3 +46,8 @@ for numbers in values:
 
 left = merge_sort(left)
 right = merge_sort(right)
+
+for i in range(len(left)):
+    total = total + abs(int(left[i]) - int(right[i]))
+
+print(total)
