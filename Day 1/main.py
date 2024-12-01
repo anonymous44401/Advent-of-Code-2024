@@ -51,3 +51,17 @@ for i in range(len(left)):
     total = total + abs(int(left[i]) - int(right[i]))
 
 print(total)
+
+similarities = 0
+
+for val in range(len(left)):
+    count = 0
+    for values in range(len(right)):
+        if left[val] == right[values]:
+            count += 1
+    if count == 0:
+        pass
+    else:
+        similarities = similarities + (left[val] * count)
+
+print(similarities)
