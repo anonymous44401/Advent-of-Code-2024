@@ -36,6 +36,7 @@ values = []
 left = []
 right = []
 total = 0
+similarities = 0
 
 for line in lines:
     values.append(line.strip().split(" "))
@@ -51,8 +52,6 @@ for i in range(len(left)):
     total = total + abs(int(left[i]) - int(right[i]))
 
 print(total)
-
-similarities = 0
 
 for val in range(len(left)):
     count = 0
